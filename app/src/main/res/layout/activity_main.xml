@@ -12,6 +12,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/evaluateBestFuelButton"
+            app:layout_constraintStart_toStartOf="@+id/evaluateBestFuelButton"
+            app:layout_constraintTop_toBottomOf="@+id/evaluateBestFuelButton" />
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/baseFuelInputContainer"
             android:layout_width="0dp"
@@ -104,7 +113,7 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/evaluateBestFuelButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
