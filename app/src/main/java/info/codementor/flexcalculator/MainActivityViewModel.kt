@@ -3,10 +3,10 @@ package info.codementor.flexcalculator
 import androidx.lifecycle.ViewModel
 
 class MainActivityViewModel : ViewModel() {
-    var baseFuelConsumption: Double = 0.0
-    var compareFuelConsumption: Double = 0.0
-    var baseFuelPrice: Double = 0.0
-    var compareFuelPrice: Double = 0.0
+    private var baseFuelConsumption: Double = 0.0
+    private var compareFuelConsumption: Double = 0.0
+    private var baseFuelPrice: Double = 0.0
+    private var compareFuelPrice: Double = 0.0
     var fuel: Fuel = Fuel.BASE
 
 
