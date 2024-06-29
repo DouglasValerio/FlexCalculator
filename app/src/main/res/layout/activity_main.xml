@@ -13,14 +13,25 @@
         android:layout_height="match_parent">
 
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/baseFuelInputContainer"
+            app:layout_constraintEnd_toStartOf="@+id/baseFuelInputContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/baseFuelInputContainer"
+            app:srcCompat="@drawable/gas_pump_solid"
+            app:tint="?android:textColor"/>
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/baseFuelInputContainer"
-            android:layout_width="0dp"
+            android:layout_width="240dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="48dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -28,11 +39,11 @@
                 android:id="@+id/baseFuelInputField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
+                android:hint="Consumo Combustível 1"
                 android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
                 android:textColor="?android:textColor"
-                android:textColorHint="?android:textColorHint"
-                android:hint="Consumo Combustível 1" />
+                android:textColorHint="?android:textColorHint" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -40,82 +51,94 @@
             android:id="@+id/searchBaseFuelButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:text="Buscar"
 
-            app:layout_constraintEnd_toEndOf="@+id/baseFuelInputContainer"
-            app:layout_constraintTop_toBottomOf="@+id/baseFuelInputContainer" />
+            app:layout_constraintBottom_toBottomOf="@+id/baseFuelInputContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/baseFuelInputContainer"
+            app:layout_constraintTop_toTopOf="@+id/baseFuelInputContainer" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/compareFuelInputContainer"
+            app:layout_constraintEnd_toStartOf="@+id/compareFuelInputContainer"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/compareFuelInputContainer"
+            app:srcCompat="@drawable/gas_pump_solid"
+            app:tint="?android:textColor" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/compareFuelInputContainer"
-            android:layout_width="match_parent"
+            android:layout_width="240dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/baseFuelInputContainer"
             app:layout_constraintStart_toStartOf="@+id/baseFuelInputContainer"
-            app:layout_constraintTop_toBottomOf="@+id/searchBaseFuelButton">
+            app:layout_constraintTop_toBottomOf="@+id/baseFuelInputContainer">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/compareFuelInputField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
+                android:hint="Consumo Combustível 2"
                 android:imeOptions="actionDone"
-                android:textColor="?android:textColor"
-                android:hint="Consumo Combustível 2" />
+                android:inputType="numberDecimal"
+                android:textColor="?android:textColor" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/searchCompareFuelButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:text="Buscar"
-            app:layout_constraintEnd_toEndOf="@+id/compareFuelInputContainer"
-            app:layout_constraintTop_toBottomOf="@+id/compareFuelInputContainer" />
+            app:layout_constraintBottom_toBottomOf="@+id/compareFuelInputContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/compareFuelInputContainer"
+            app:layout_constraintTop_toTopOf="@+id/compareFuelInputContainer" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/baseFuelPriceInputContainer"
-            android:layout_width="match_parent"
+            android:layout_width="240dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="@+id/searchCompareFuelButton"
+            app:layout_constraintEnd_toEndOf="@+id/compareFuelInputContainer"
             app:layout_constraintStart_toStartOf="@+id/compareFuelInputContainer"
-            app:layout_constraintTop_toBottomOf="@+id/searchCompareFuelButton">
+            app:layout_constraintTop_toBottomOf="@+id/compareFuelInputContainer">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/baseFuelPriceInputField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
+                android:hint="Valor do Litro do Combustível 1"
                 android:imeOptions="actionDone"
-                android:textColor="?android:textColor"
-                android:hint="Valor do Litro do Combustível 1" />
+                android:inputType="numberDecimal"
+                android:textColor="?android:textColor" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/compareFuelPriceInputContainer"
-            android:layout_width="match_parent"
+            android:layout_width="240dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/baseFuelPriceInputContainer"
+            app:layout_constraintStart_toStartOf="@+id/baseFuelPriceInputContainer"
             app:layout_constraintTop_toBottomOf="@+id/baseFuelPriceInputContainer">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/compareFuelPriceInputField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
+                android:hint="Valor do Litro do Combustível 2"
                 android:imeOptions="actionDone"
-                android:textColor="?android:textColor"
-                android:hint="Valor do Litro do Combustível 2" />
+                android:inputType="numberDecimal"
+                android:textColor="?android:textColor" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -127,5 +150,6 @@
             app:layout_constraintEnd_toEndOf="@+id/compareFuelPriceInputContainer"
             app:layout_constraintStart_toStartOf="@+id/compareFuelPriceInputContainer"
             app:layout_constraintTop_toBottomOf="@+id/compareFuelPriceInputContainer" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
