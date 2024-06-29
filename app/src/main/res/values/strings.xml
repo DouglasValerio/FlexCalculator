@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">FlexCalculator</string>
+    <string name="comparar">Comparar</string>
+    <string name="preco_2">Preço do combustível 2</string>
+    <string name="preco_1">Preço do combustível 1</string>
+    <string name="buscar">Buscar</string>
+    <string name="km_l">km/L</string>
 </resources>

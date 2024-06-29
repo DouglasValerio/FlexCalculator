@@ -27,7 +27,7 @@ class FuelOptionAdapter(private val context: Context, private val dataSource: Li
         val item = getItem(position) as FuelOptionModel
 
         titleTextView.text = item.label
-        subtitleTextView.text = item.consumption+item.unit+"/km"
+        subtitleTextView.text = "${item.consumption} km/${item.unit}"
 
         return rowView
     }
