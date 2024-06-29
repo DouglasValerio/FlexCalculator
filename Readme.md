@@ -60,18 +60,11 @@ Contribuições são bem-vindas! Para contribuir, siga os passos abaixo:
 4. Faça o push para a branch (`git push origin feature/nova-funcionalidade`).
 5. Abra um Pull Request.
 
-## Licença
 
-Este projeto está licenciado sob os termos da licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-## Autores
-
-- [Seu Nome](https://github.com/seuusuario) - Desenvolvedor
-- [Nome do Professor](https://github.com/professorusuario) - Orientador
 
 ---
 
-**Nota**: Este aplicativo foi desenvolvido como parte da avaliação da disciplina de Android Básico do curso de pós-graduação em Dispositivos Móveis. Para mais informações sobre o curso, visite [Nome da Instituição](https://www.instituicao.edu.br).
+**Nota**: Este aplicativo foi desenvolvido como parte da avaliação da disciplina de Android Básico do curso de pós-graduação em Dispositivos Móveis. Para mais informações sobre o curso, visite [UTFPR](https://www.pb.utfpr.edu.br/posmoveis/).
 
 ---
 
