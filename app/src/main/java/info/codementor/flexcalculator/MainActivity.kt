@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private var fuelBaseLabel = "Combustível 1"
     private var fuelCompareLabel = "Combustível 2"
+    private lateinit var viewModel: MainActivityViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        val viewModel =
+        viewModel =
             ViewModelProvider.NewInstanceFactory().create(MainActivityViewModel::class.java)
 
         binding.evaluateBestFuelButton.setOnClickListener {
@@ -33,6 +34,7 @@ class MainActivity : AppCompatActivity() {
                 binding.baseFuelPriceInputField.text.toString(),
                 binding.compareFuelPriceInputField.text.toString(),
             )
+            viewModel.getTrivia()
             hideKeyboardAndClearFocus(this)
             showBottomSheet(evaluateBestFuel(viewModel.fuel))
         }
@@ -59,9 +61,9 @@ class MainActivity : AppCompatActivity() {
     private fun evaluateBestFuel(fuel: Fuel): String {
 
       val result= if(fuel == Fuel.BASE) {
-            "O melhor combustível é o $fuelBaseLabel"
+            "Usar $fuelBaseLabel como combustível é a melhor opção"
         } else {
-            "O melhor combustível é o $fuelCompareLabel"
+          "Usar $fuelCompareLabel como combustível é a melhor opção"
         }
         return result
     }
@@ -76,6 +78,7 @@ class MainActivity : AppCompatActivity() {
                 binding.baseFuelInputField.setText(value.toString())
                 binding.baseFuelInputContainer.hint = fuelBaseLabel
                 binding.baseFuelPriceInputContainer.hint = "Valor do $unit do $fuelBaseLabel"
+                viewModel.setBaseFuelLabel(fuelBaseLabel)
             }
         }
 
@@ -88,6 +91,7 @@ class MainActivity : AppCompatActivity() {
                 binding.compareFuelInputField.setText(value.toString())
                 binding.compareFuelInputContainer.hint = fuelCompareLabel
                 binding.compareFuelPriceInputContainer.hint = "Valor do $unit do $fuelCompareLabel"
+                viewModel.setCompareFuelLabel(fuelCompareLabel)
             }
         }
 
@@ -104,6 +108,7 @@ class MainActivity : AppCompatActivity() {
 
         dialog.setContentView(sheetBiding.root)
         sheetBiding.resultTextView.text = result
+        sheetBiding.triviaTextView.text = viewModel.travelTrivia
 
         dialog.show()
     }
