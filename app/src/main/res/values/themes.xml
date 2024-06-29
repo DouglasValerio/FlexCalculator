@@ -25,10 +25,19 @@
         <item name="colorPrimaryVariant">@color/colorPrimaryDarkVariant</item>
         <item name="android:textColor">@color/colorOnPrimaryLight</item>
         <item name="android:textColorHint">@color/colorOnPrimaryLight</item>
+        <item name="android:textColorHighlight">@color/colorOnPrimaryLight</item>
         <item name="colorOnPrimary">@color/colorOnPrimaryDark</item>
         <item name="colorSecondary">@color/colorSecondaryDark</item>
         <item name="colorSecondaryVariant">@color/colorSecondaryDarkVariant</item>
         <item name="colorOnSecondary">@color/colorOnSecondaryDark</item>
         <item name="android:windowBackground">@color/windowBackgroundDark</item>
+    </style>
+
+    <style name="BottomSheetDialog" parent="Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetDialogStyle</item>
+    </style>
+
+    <style name="BottomSheetDialogStyle" parent="Widget.Design.BottomSheet.Modal">"
+        <item name="android:background">@android:color/transparent</item>
     </style>
 </resources>

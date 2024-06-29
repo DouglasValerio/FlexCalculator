@@ -7,8 +7,10 @@ import android.view.inputmethod.InputMethodManager
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.textfield.TextInputEditText
 import info.codementor.flexcalculator.databinding.ActivityMainBinding
+import info.codementor.flexcalculator.databinding.BottomSheetLayoutBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -32,7 +34,7 @@ class MainActivity : AppCompatActivity() {
                 binding.compareFuelPriceInputField.text.toString(),
             )
             hideKeyboardAndClearFocus(this)
-            binding.resultTextView.text = evaluateBestFuel(viewModel.fuel)
+            showBottomSheet(evaluateBestFuel(viewModel.fuel))
         }
 
 
@@ -54,7 +56,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun evaluateBestFuel(fuel: Fuel): CharSequence? {
+    private fun evaluateBestFuel(fuel: Fuel): String {
 
       val result= if(fuel == Fuel.BASE) {
             "O melhor combustível é o $fuelBaseLabel"
@@ -88,6 +90,23 @@ class MainActivity : AppCompatActivity() {
                 binding.compareFuelPriceInputContainer.hint = "Valor do $unit do $fuelCompareLabel"
             }
         }
+
+    private  fun showBottomSheet(result: String){
+        val dialog = BottomSheetDialog(this, R.style.BottomSheetDialog)
+        val sheetBiding: BottomSheetLayoutBinding = BottomSheetLayoutBinding.inflate(layoutInflater, null, false)
+        sheetBiding.clearButton.setOnClickListener {
+            binding.baseFuelInputField.setText("")
+            binding.compareFuelInputField.setText("")
+            binding.baseFuelPriceInputField.setText("")
+            binding.compareFuelPriceInputField.setText("")
+            dialog.dismiss()
+        }
+
+        dialog.setContentView(sheetBiding.root)
+        sheetBiding.resultTextView.text = result
+
+        dialog.show()
+    }
 
 
 }
