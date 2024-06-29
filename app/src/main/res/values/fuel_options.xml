@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fuelOptions">
+        <item>Gasolina</item>
+        <item>Etanol</item>
+        <item>Gás Natural</item>
+        <item>Eletricidade</item>
+    </string-array>
+    <string-array name="fuelUnits">
+        <item>Litro</item>
+        <item>Litro</item>
+        <item>m³</item>
+        <item>kWh</item>
+    </string-array>
+    <string-array name="fuelConsumption">
+        <item>15</item>
+        <item>12</item>
+        <item>35</item>
+        <item>41</item>
+    </string-array>
+</resources>

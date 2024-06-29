@@ -1,5 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Light Theme Colors -->
+    <color name="colorPrimaryLight">#6200EE</color>
+    <color name="colorPrimaryLightVariant">#3700B3</color>
+    <color name="colorOnPrimaryLight">#FFFFFF</color>
+    <color name="colorSecondaryLight">#03DAC6</color>
+    <color name="colorSecondaryLightVariant">#018786</color>
+    <color name="colorOnSecondaryLight">#000000</color>
+    <color name="windowBackgroundLight">#FFFFFF</color>
+
+    <!-- Dark Theme Colors -->
+    <color name="colorPrimaryDark">#BB86FC</color>
+    <color name="colorPrimaryDarkVariant">#3700B3</color>
+    <color name="colorOnPrimaryDark">#000000</color>
+    <color name="colorSecondaryDark">#03DAC6</color>
+    <color name="colorSecondaryDarkVariant">#018786</color>
+    <color name="colorOnSecondaryDark">#000000</color>
+    <color name="windowBackgroundDark">#121212</color>
 </resources>

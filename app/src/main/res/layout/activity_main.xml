@@ -17,6 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:text="Resultado"
             app:layout_constraintEnd_toEndOf="@+id/evaluateBestFuelButton"
             app:layout_constraintStart_toStartOf="@+id/evaluateBestFuelButton"
             app:layout_constraintTop_toBottomOf="@+id/evaluateBestFuelButton" />
@@ -36,6 +37,9 @@
                 android:id="@+id/baseFuelInputField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:imeOptions="actionDone"
+                android:textColor="?android:textColor"
                 android:hint="Consumo Combustível 1" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -46,6 +50,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="Buscar"
+
             app:layout_constraintEnd_toEndOf="@+id/baseFuelInputContainer"
             app:layout_constraintTop_toBottomOf="@+id/baseFuelInputContainer" />
 
@@ -64,6 +69,9 @@
                 android:id="@+id/compareFuelInputField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:imeOptions="actionDone"
+                android:textColor="?android:textColor"
                 android:hint="Consumo Combustível 2" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -91,6 +99,9 @@
                 android:id="@+id/baseFuelPriceInputField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:imeOptions="actionDone"
+                android:textColor="?android:textColor"
                 android:hint="Valor do Litro do Combustível 1" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -109,6 +120,9 @@
                 android:id="@+id/compareFuelPriceInputField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:imeOptions="actionDone"
+                android:textColor="?android:textColor"
                 android:hint="Valor do Litro do Combustível 2" />
         </com.google.android.material.textfield.TextInputLayout>
 
